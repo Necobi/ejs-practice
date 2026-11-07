@@ -10,6 +10,29 @@
         <h2>Hello, <%=person.name %></h2>
         <h3>Occupation: <%=person.occupation%></h3>
         <h3>Favortie Color: <%=person.favoriteColor %></h3>
+
+
+        <!-- Decision logic for occupation -->
+        <% if (['plumber', 'organist',  
+            'bagpiper'].includes(person.occupation.toLowerCase())) { %>
+            <p>You work with pipes!</p>
+
+        <% } else { %>
+        <p>That's an interesting job!</p>
+        <% } %>
+
+
+
+    <!-- Decision logic for color-->
+         <% if (['teal', 'orange',  
+            'green'].includes(person.favoriteColor.toLowerCase())) { %>
+            <p>Wow that's a great color!</p>
+
+        <% } else { %>
+        <p>That's a pretty color too!</p>
+        <% } %>
+
+
     
 </body>
 </html>

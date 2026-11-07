@@ -12,11 +12,24 @@ app.use(express.static('public'));
 
 //defining a default route 
 app.get('/', (req, res) => {
+    //creating JSON object "person"
     const person = {
          name: 'Donald Duck',
-         occupation:'plumber', 
-         favoriteColor: 'Teal'};
+         occupation:'Real Estate Agent', 
+         favoriteColor: 'Pink'};
   res.render('home', {person});
+
+});
+
+app.get('/friends', (req, res) => {
+    const friends= ['Mickey','Goofy','Minnie','Daisy'];
+    res.render('friends',{friends});
+
+});
+
+app.get('/movies', (req, res) => {
+    const movies= ['Annie','Suicide Squad','Tangled','High School Musical 3'];
+    res.render('movies',{movies});
 
 });
 
