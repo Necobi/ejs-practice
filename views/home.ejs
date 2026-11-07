@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EJS Practice</title>
+    
 </head>
 <body>
-        <h1>EJS Practice</h1>
+        <div id="header">
+            <%- include('partials/header') %>
+        </div>
+
+        
         <h2>Hello, <%=person.name %></h2>
         <h3>Occupation: <%=person.occupation%></h3>
         <h3>Favortie Color: <%=person.favoriteColor %></h3>
@@ -31,6 +36,12 @@
         <% } else { %>
         <p>That's a pretty color too!</p>
         <% } %>
+
+
+        <!-- Include partials -->
+            
+           
+            <%- include('partials/footer') %>
 
 
     
